@@ -1,0 +1,65 @@
+{
+  "passages": [
+    {
+      "id": "gato",
+      "levels": [1, 3],
+      "title": "El gato Pelusa",
+      "text": "Pelusa es un gato gris. Le gusta dormir al sol. Cuando tiene hambre, va a la cocina y maúlla. Su dueña, Ana, le da leche y croquetas.",
+      "questions": [
+        { "q": "¿De qué color es Pelusa?", "options": ["Gris", "Negro", "Blanco"], "answer": 0 },
+        { "q": "¿Qué hace cuando tiene hambre?", "options": ["Sale al parque", "Va a la cocina y maúlla", "Se esconde"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "lluvia",
+      "levels": [1, 4],
+      "title": "Un día de lluvia",
+      "text": "Hoy llovió toda la tarde. Leo se puso sus botas amarillas y saltó en los charcos. Después, su mamá lo esperó con una toalla y chocolate caliente.",
+      "questions": [
+        { "q": "¿Qué se puso Leo?", "options": ["Botas amarillas", "Un gorro rojo", "Una capa"], "answer": 0 },
+        { "q": "¿Quién lo esperó con una toalla?", "options": ["Su papá", "Su mamá", "Su abuela"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "abejas",
+      "levels": [3, 5],
+      "title": "Las abejas",
+      "text": "Las abejas viven en colmenas y trabajan en equipo. Salen a buscar néctar de las flores y lo convierten en miel. Al volar de flor en flor también llevan polen, y así ayudan a que nazcan nuevas plantas.",
+      "questions": [
+        { "q": "¿Qué convierten las abejas en miel?", "options": ["Agua", "Néctar", "Hojas"], "answer": 1 },
+        { "q": "¿Cómo ayudan a las plantas?", "options": ["Llevando polen", "Regándolas", "Cortándolas"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "tren",
+      "levels": [4, 6],
+      "title": "El tren de las siete y diez",
+      "text": "Marta llegó a la estación a las siete menos cuarto. Su tren salía a las siete y diez. Se sentó en un banco y leyó su libro mientras esperaba.",
+      "questions": [
+        { "q": "¿A qué hora llegó Marta?", "options": ["6:45", "7:15", "7:45"], "answer": 0 },
+        { "q": "¿Cuántos minutos esperó el tren?", "options": ["15", "25", "35"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "romanos",
+      "levels": [6, 8],
+      "title": "Los números romanos",
+      "text": "Los romanos escribían los números con letras: I vale 1, V vale 5, X vale 10, L vale 50 y C vale 100. Para escribir 14 usaban XIV, es decir, 10 más 5 menos 1. Todavía vemos estos números en algunos relojes y en los nombres de ciertos reyes.",
+      "questions": [
+        { "q": "¿Cuánto vale la letra X?", "options": ["5", "10", "50"], "answer": 1 },
+        { "q": "¿Qué número se escribe XIV?", "options": ["16", "14", "6"], "answer": 1 },
+        { "q": "¿Dónde vemos hoy estos números?", "options": ["En relojes y nombres de reyes", "Solo en los libros de historia", "En ningún lugar"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "poco-cada-dia",
+      "levels": [7, 9],
+      "title": "Un poco cada día",
+      "text": "Un entrenador decía que practicar un poco cada día vale más que practicar mucho un solo día. El cerebro, como un músculo, se fortalece con la repetición. Por eso, quince minutos diarios de cálculo mental durante un año suman más de noventa horas de entrenamiento.",
+      "questions": [
+        { "q": "Según el texto, ¿qué vale más?", "options": ["Practicar mucho un solo día", "Practicar un poco cada día", "No practicar"], "answer": 1 },
+        { "q": "Quince minutos diarios durante un año suman...", "options": ["Más de 9 horas", "Más de 90 horas", "Más de 900 horas"], "answer": 1 }
+      ]
+    }
+  ]
+}

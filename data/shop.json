@@ -1,0 +1,21 @@
+{
+  "items": [
+    { "id": "red", "type": "color", "value": "#d62839", "price": 20 },
+    { "id": "blue", "type": "color", "value": "#1d5fd1", "price": 20 },
+    { "id": "green", "type": "color", "value": "#1f8a3b", "price": 20 },
+    { "id": "purple", "type": "color", "value": "#7b2cbf", "price": 30 },
+    { "id": "orange", "type": "color", "value": "#e36a00", "price": 30 },
+    { "id": "sky", "type": "background", "value": "linear-gradient(#bde0fe,#eaf6ff)", "price": 25 },
+    { "id": "forest", "type": "background", "value": "linear-gradient(#b7efb2,#4caf50)", "price": 30 },
+    { "id": "sunset", "type": "background", "value": "linear-gradient(#ffd27a,#ff7a9c)", "price": 40 },
+    { "id": "space", "type": "background", "value": "linear-gradient(#1b1b3a,#5a2d8c)", "price": 50 },
+    { "id": "ribbon", "type": "accessory", "value": "🎀", "price": 20 },
+    { "id": "shades", "type": "accessory", "value": "🕶️", "price": 25 },
+    { "id": "cap", "type": "accessory", "value": "🧢", "price": 25 },
+    { "id": "tophat", "type": "accessory", "value": "🎩", "price": 30 },
+    { "id": "headphones", "type": "accessory", "value": "🎧", "price": 35 },
+    { "id": "star", "type": "accessory", "value": "🌟", "price": 40 },
+    { "id": "butterfly", "type": "accessory", "value": "🦋", "price": 45 },
+    { "id": "crown", "type": "accessory", "value": "👑", "price": 80 }
+  ]
+}

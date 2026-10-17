@@ -1,0 +1,122 @@
+{
+  "app": { "name": "Daily Math" },
+  "common": { "ok": "OK", "cancel": "Cancel", "back": "Back", "changeLanguage": "Change language", "yes": "Yes", "save": "Save", "typeToConfirm": "Type \"{word}\" to confirm.", "close": "Close", "delete": "Delete", "add": "Add" },
+  "pin": { "title": "Parent area", "label": "4-digit PIN", "wrong": "Wrong PIN" },
+  "welcome": {
+    "title": "Welcome to Daily Math!", "subtitle": "15 minutes a day to train mental math.",
+    "chooseLang": "Choose a language", "suggested": "suggested", "newFamily": "I'm a new family", "haveCode": "I already have a family code",
+    "codeLabel": "Family code", "join": "Join", "codeInvalid": "That code is not valid.", "notFound": "That family was not found.", "syncError": "Could not connect. Please try again later."
+  },
+  "install": {
+    "link": "Install on your phone", "title": "Install the app", "button": "Install now",
+    "ios": ["Open this page in Safari.", "Tap the Share button.", "Choose \"Add to Home Screen\".", "Tap \"Add\"."],
+    "android": ["Open this page in Chrome.", "Tap the three-dot menu.", "Choose \"Install app\" or \"Add to Home screen\".", "Confirm."],
+    "offline": "Once installed, it also works offline."
+  },
+  "parent": {
+    "setup": {
+      "title": "Parent setup", "intro": "Create a PIN to protect the parent panel and the delete options.",
+      "pin": "PIN (4 digits)", "pin2": "Repeat the PIN", "pinHint": "Keep it safe: it cannot be recovered.",
+      "consent": "I am the parent or guardian and I accept the data handling described in the", "privacyLink": "privacy policy (draft)",
+      "pinError": "The PIN must be 4 digits and match.", "consentError": "You must accept to continue.", "continue": "Continue"
+    },
+    "title": "Parent panel", "children": "Children", "noChildren": "No profiles yet.",
+    "chartLabel": "Active minutes over the last 14 days",
+    "childStats": "Sessions: {sessions} · Streak: {streak} (best {best}) · Coins: {coins}", "tables": "Mastered tables (accuracy)",
+    "mode": "Mode",
+    "modes": { "grade": "My grade", "challenge": "Challenge", "confidence": "Confidence", "onedigit": "One digit" },
+    "modeHelp": {
+      "grade": "Operations for the chosen grade.", "challenge": "Harder operations. The child does not see it is a challenge.",
+      "confidence": "One level easier to build confidence.", "onedigit": "One-digit numbers only, ideal for starting out."
+    },
+    "adaptive": "Adaptive difficulty (moves up or down gradually)", "bilingual": "Reading in the other language (bilingual)",
+    "weekGoal": "Weekly goal", "daysOption": "{n} days", "editProfile": "Edit", "print": "Printable sheet",
+    "deleteProfile": "Delete profile", "deleteProfileConfirm": "Delete {nick}'s profile and all progress?",
+    "rewards": "Real family prizes", "rewardsHint": "Set prizes that you give when a streak is reached (for example, 30 days).",
+    "rewardText": "Prize", "rewardDays": "Streak days", "daysUnit": "days", "unlockedBy": "Reached by", "notYet": "Not yet", "delivered": "Delivered",
+    "sync": "Sync devices", "syncNotConfigured": "Sync is not enabled in this installation. Data is saved only on this device.",
+    "syncHint": "Create a family code to share progress between devices. Data is encrypted before leaving this device.",
+    "syncEnable": "Create family code", "syncCode": "Family code", "syncWarn": "Keep this code safe: without it the data cannot be recovered or decrypted.",
+    "syncLast": "Last sync", "syncNow": "Sync now", "syncOff": "Disconnect", "syncDelete": "Disconnect and delete from the cloud",
+    "syncDeleteConfirm": "Delete the cloud data and disconnect this device?",
+    "data": "Data", "dataHint": "Export a copy (JSON) or import it on another device.", "export": "Export", "import": "Import",
+    "importConfirm": "This replaces the current data. Continue?", "importOk": "Data imported.", "importError": "The file is not valid.",
+    "deleteAll": "Delete all data", "deleteAllConfirm": "All profiles and progress on this device will be deleted (and from the cloud if enabled).",
+    "deleteWord": "DELETE", "deleteRemoteFailed": "Could not delete the cloud copy. Nothing was deleted.",
+    "changePin": "Change PIN", "newPin": "New PIN", "pinChanged": "PIN changed.", "more": "More", "lock": "Lock panel"
+  },
+  "selector": { "title": "Who is practicing?", "add": "Add child", "familyGoal": "Family goal this week", "familyGoalText": "{done} of {target} days together", "parents": "Parents" },
+  "profile": {
+    "avatar": "Avatar", "ageOption": "{n} years old", "nickRequired": "Enter a nickname.", "edit": "Edit profile", "new": "New profile",
+    "nick": "Nickname", "nickHint": "Use a nickname, not a full name.", "language": "Language", "grade": "Grade", "orAge": "Or choose by age"
+  },
+  "grades": { "1": "Grade 1", "2": "Grade 2", "3": "Grade 3", "4": "Grade 4", "5": "Grade 5", "6": "Grade 6", "7": "Grade 7", "8": "Grade 8", "9": "Grade 9" },
+  "home": {
+    "practice": "Let's practice!", "practiceGrade": "Practice ({grade})", "continue": "Continue", "doneToday": "You're done for today!",
+    "openChest": "Open the chest", "moreOptional": "Practice more (optional)", "reading": "Reading", "world": "My world",
+    "hello": "Hi, {nick}!", "streak": "Streak {n}", "week": "Week {done}/{goal}", "sound": "Sound", "reduceMotion": "Reduce animations"
+  },
+  "mascot": {
+    "stage": { "0": "An egg waiting", "1": "A newborn chick", "2": "A curious chick", "3": "A strong hen", "4": "An unstoppable eagle!" },
+    "hint": "Your pet grows with your streak."
+  },
+  "practice": {
+    "timeBar": "Active time", "yourAnswer": "Your answer", "next": "Next", "paused": "Paused", "pausedHint": "The clock stopped. Tap to continue.",
+    "resume": "Continue", "block": "Block complete!", "praise": ["Great job!", "Correct!", "Awesome!", "Excellent!", "Well done!"],
+    "wrong": "Almost. The answer was {answer}. We'll see it again!", "minus": "Minus sign", "delete": "Delete", "saveExit": "Save and exit", "check": "Check"
+  },
+  "end": {
+    "title": "Session complete!", "titleExtra": "Great extra work!", "coins": "You earned {n} coins",
+    "reason": { "base": "Full session", "streak": "Streak bonus", "week": "Weekly goal", "family": "Family goal" },
+    "streak": "Streak: {n} days", "grace": "{n} grace day(s) were used to keep your streak.", "newBadge": "New badge",
+    "summary": "You did {n} operations and got {ok} right.", "review": "You reviewed {n} to learn from them.", "positive": "Every day you practice, your brain gets stronger.",
+    "chest": "Open today's chest", "chestCoins": "The chest had {n} coins!", "chestItem": "The chest had a new item: {name}!", "back": "Back to start"
+  },
+  "world": {
+    "title": "My world", "tab": { "badges": "Badges", "shop": "Shop", "avatar": "Avatar" },
+    "earned": "Earned", "locked": "Still to earn", "type": { "color": "Colors", "accessory": "Accessories", "background": "Backgrounds" },
+    "equip": "Wear", "unequip": "Remove", "buy": "Buy", "needCoins": "{n} more coins needed"
+  },
+  "badges": {
+    "first": { "name": "First step", "desc": "Complete your first session." },
+    "sessions10": { "name": "Steady", "desc": "Complete 10 sessions." },
+    "sessions50": { "name": "Champion", "desc": "Complete 50 sessions." },
+    "sessions100": { "name": "Legend", "desc": "Complete 100 sessions." },
+    "streak3": { "name": "3-day streak", "desc": "Practice 3 days in a row." },
+    "streak7": { "name": "7-day streak", "desc": "Practice 7 days in a row." },
+    "streak30": { "name": "30-day streak", "desc": "Practice 30 days in a row." },
+    "streak100": { "name": "100-day streak", "desc": "Practice 100 days in a row." },
+    "perfect": { "name": "Perfect session", "desc": "A session with no mistakes." },
+    "tables1": { "name": "First table", "desc": "Master a multiplication table." },
+    "tables5": { "name": "Five tables", "desc": "Master five multiplication tables." },
+    "week": { "name": "Full week", "desc": "Reach your weekly goal." },
+    "reader": { "name": "Reader", "desc": "Complete a reading." },
+    "age14": { "name": "PolloFenix", "desc": "A very special badge." }
+  },
+  "shop": {
+    "red": "Red", "blue": "Blue", "green": "Green", "purple": "Purple", "orange": "Orange",
+    "sky": "Sky", "forest": "Forest", "sunset": "Sunset", "space": "Space",
+    "ribbon": "Ribbon", "shades": "Shades", "cap": "Cap", "tophat": "Top hat", "headphones": "Headphones", "star": "Star", "butterfly": "Butterfly", "crown": "Crown"
+  },
+  "reading": { "good": "Correct!", "wrong": "The answer was: {answer}", "done": "Reading finished!", "score": "You got {ok} of {n} right.", "coins": "You earned {n} coins for reading today." },
+  "print": { "print": "Print", "hint": "Page 1: operations. Page 2: answers.", "title": "Operations", "answers": "Answers" },
+  "privacy": {
+    "link": "Privacy and terms", "title": "Privacy policy (draft)",
+    "draftNotice": "This text is an informational draft. It must be reviewed by a lawyer before the app is offered to the public.",
+    "sections": [
+      { "h": "What data is stored", "p": "Nicknames, avatars, grade, progress, coins and badges. No real names, emails or location are requested." },
+      { "h": "Where it is stored", "p": "By default, only on this device. If the family enables sync, an encrypted copy (encrypted on the device) is sent to a server; the server cannot read it." },
+      { "h": "Ads and tracking", "p": "The app uses no ads, analytics or tracking cookies." },
+      { "h": "Parental control", "p": "Parents can export, import and delete all data from the PIN-protected panel, including the cloud copy." },
+      { "h": "Minors", "p": "The app is intended for children under the supervision of a parent or guardian, who gives consent during setup." }
+    ]
+  },
+  "terms": {
+    "title": "Terms of use (draft)",
+    "sections": [
+      { "h": "Use", "p": "The app is an educational practice tool. It does not replace school teaching." },
+      { "h": "No warranty", "p": "Provided as is. If you lose the family code or the PIN, the data cannot be recovered." },
+      { "h": "Changes", "p": "These terms may change. This is a draft pending legal review." }
+    ]
+  }
+}

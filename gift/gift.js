@@ -1,0 +1,186 @@
+// Módulo del regalo oculto. Sin dependencias; los datos cifrados llegan por parámetro.
+
+const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+
+export async function decryptGift(data, password) {
+  const enc = new TextEncoder();
+  const base = await crypto.subtle.importKey(
+    'raw',
+    enc.encode(password.normalize('NFKC')),
+    'PBKDF2',
+    false,
+    ['deriveKey']
+  );
+  const key = await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt: b64(data.salt), iterations: data.iterations, hash: 'SHA-256' },
+    base,
+    { name: 'AES-GCM', length: 256 },
+    false,
+    ['decrypt']
+  );
+  // AES-GCM lanza si la clave es incorrecta o si los datos fueron alterados.
+  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(data.iv) }, key, b64(data.ct));
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+
+const TAPS_REQUIRED = 14;
+const TAP_WINDOW_MS = 3000;
+const BADGE_KEY = 'calculo.badge.age14';
+
+const CSS = `
+.gift-ov{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(20,20,40,.7);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.gift-box{background:#fff;color:#1b1b2f;border-radius:20px;max-width:420px;width:100%;max-height:92vh;overflow:auto;padding:24px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.gift-box h2{margin:0 0 12px;font-size:1.5rem}
+.gift-box input{width:100%;box-sizing:border-box;min-height:48px;font-size:1.1rem;padding:8px 12px;border:2px solid #5b5bd6;border-radius:12px;margin:8px 0}
+.gift-box button{min-height:48px;min-width:120px;font-size:1.1rem;font-weight:600;border:0;border-radius:12px;padding:8px 18px;margin:6px 4px;cursor:pointer;background:#5b5bd6;color:#fff}
+.gift-box button.sec{background:#e8e8f5;color:#1b1b2f}
+.gift-msg{min-height:1.4em;margin:4px 0;color:#5b3b00}
+.gift-badge{display:inline-block;margin:12px 0;padding:8px 16px;border-radius:999px;background:#ffd54a;color:#3a2a00;font-weight:700}
+.gift-letter{text-align:left;line-height:1.5;font-size:1.05rem}
+.gift-confetti{position:fixed;inset:0;z-index:10000;pointer-events:none}
+`;
+
+function injectStyles() {
+  if (document.getElementById('gift-style')) return;
+  const s = document.createElement('style');
+  s.id = 'gift-style';
+  s.textContent = CSS;
+  document.head.appendChild(s);
+}
+
+export function confetti() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (document.body.classList.contains('reduce-motion')) return;
+  const cv = document.createElement('canvas');
+  cv.className = 'gift-confetti';
+  cv.width = innerWidth;
+  cv.height = innerHeight;
+  document.body.appendChild(cv);
+  const ctx = cv.getContext('2d');
+  const colors = ['#ff595e', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'];
+  const parts = Array.from({ length: 160 }, () => ({
+    x: Math.random() * cv.width,
+    y: -20 - Math.random() * cv.height * 0.5,
+    w: 6 + Math.random() * 6,
+    h: 8 + Math.random() * 8,
+    vy: 2 + Math.random() * 4,
+    vx: -1.5 + Math.random() * 3,
+    r: Math.random() * Math.PI,
+    vr: -0.2 + Math.random() * 0.4,
+    c: colors[Math.floor(Math.random() * colors.length)],
+  }));
+  const end = performance.now() + 5000;
+  (function frame(now) {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    for (const p of parts) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.r += p.vr;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.r);
+      ctx.fillStyle = p.c;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    }
+    if (now < end) requestAnimationFrame(frame);
+    else cv.remove();
+  })(performance.now());
+}
+
+function el(tag, props = {}, ...kids) {
+  const n = document.createElement(tag);
+  Object.assign(n, props);
+  n.append(...kids);
+  return n;
+}
+
+function showGift(ov, gift, onUnlock) {
+  const box = ov.firstChild;
+  box.replaceChildren(
+    el('h2', { textContent: gift.title }),
+    el('div', { className: 'gift-badge', textContent: gift.badge }),
+    el(
+      'div',
+      { className: 'gift-letter' },
+      ...String(gift.letter)
+        .split('\n')
+        .map((line) => el('p', { textContent: line }))
+    ),
+    el('button', { textContent: gift.close, onclick: () => ov.remove() })
+  );
+  try {
+    localStorage.setItem(BADGE_KEY, '1');
+  } catch {
+    // Sin almacenamiento disponible: el regalo se muestra igual.
+  }
+  if (onUnlock) onUnlock();
+  confetti();
+}
+
+function openDialog(data, onUnlock) {
+  if (document.querySelector('.gift-ov')) return;
+  const input = el('input', {
+    type: 'password',
+    autocomplete: 'off',
+    ariaLabel: 'Contraseña / Password',
+    placeholder: '••••••••',
+  });
+  const msg = el('div', { className: 'gift-msg', role: 'status' });
+  const ok = el('button', { textContent: 'OK' });
+  const cancel = el('button', { className: 'sec', textContent: '✕' });
+  const box = el(
+    'div',
+    { className: 'gift-box' },
+    el('h2', { textContent: '🔑' }),
+    input,
+    msg,
+    ok,
+    cancel
+  );
+  const ov = el('div', { className: 'gift-ov', role: 'dialog', ariaModal: 'true' }, box);
+  cancel.onclick = () => ov.remove();
+
+  const submit = async () => {
+    ok.disabled = true;
+    msg.textContent = '…';
+    try {
+      const gift = await decryptGift(data, input.value);
+      showGift(ov, gift, onUnlock);
+    } catch {
+      msg.textContent = 'Esa no es la clave. ¡Inténtalo otra vez! / That is not the key. Try again!';
+      input.select();
+      ok.disabled = false;
+    }
+  };
+  ok.onclick = submit;
+  input.onkeydown = (e) => {
+    if (e.key === 'Enter') submit();
+    if (e.key === 'Escape') ov.remove();
+  };
+  document.body.appendChild(ov);
+  input.focus();
+}
+
+export function initGift(logo, data, { onUnlock } = {}) {
+  injectStyles();
+  let taps = 0;
+  let last = 0;
+  logo.addEventListener('click', () => {
+    const now = Date.now();
+    taps = now - last > TAP_WINDOW_MS ? 1 : taps + 1;
+    last = now;
+    if (taps >= TAPS_REQUIRED) {
+      taps = 0;
+      openDialog(data, onUnlock);
+    }
+  });
+}
+
+export function hasAge14Badge() {
+  try {
+    return localStorage.getItem(BADGE_KEY) === '1';
+  } catch {
+    return false;
+  }
+}

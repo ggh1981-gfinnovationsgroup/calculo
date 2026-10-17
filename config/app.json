@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "syncUrl": "",
+  "session": { "activeMs": 900000, "idleMs": 10000, "blockSize": 10, "maxTickMs": 2000 },
+  "rewards": {
+    "fullCoins": 10,
+    "partialCoinsMax": 5,
+    "streakBonuses": [[100, 40], [30, 15], [7, 5], [3, 2]],
+    "chestMin": 3,
+    "chestMax": 15,
+    "chestItemChance": 0.15,
+    "weekGoalBonus": 10,
+    "familyGoalBonus": 10,
+    "readingCoins": 3,
+    "graceStart": 2,
+    "graceMax": 3
+  },
+  "adaptive": { "up": 0.9, "down": 0.6, "step": 0.5, "min": -2, "max": 2 },
+  "tables": { "minAnswers": 15, "minAccuracy": 0.9 },
+  "avatars": ["🦊", "🐼", "🐯", "🦁", "🐸", "🐵", "🐙", "🦄", "🐧", "🐶", "🐱", "🐻"],
+  "print": { "count": 100, "columns": 5 }
+}

@@ -1,0 +1,122 @@
+{
+  "app": { "name": "Cálculo diario" },
+  "common": { "ok": "Aceptar", "cancel": "Cancelar", "back": "Volver", "changeLanguage": "Cambiar idioma", "yes": "Sí", "save": "Guardar", "typeToConfirm": "Escribe \"{word}\" para confirmar.", "close": "Cerrar", "delete": "Eliminar", "add": "Añadir" },
+  "pin": { "title": "Zona de padres", "label": "PIN de 4 dígitos", "wrong": "PIN incorrecto" },
+  "welcome": {
+    "title": "¡Bienvenido a Cálculo diario!", "subtitle": "15 minutos al día para entrenar el cálculo mental.",
+    "chooseLang": "Elige un idioma", "suggested": "sugerido", "newFamily": "Soy una familia nueva", "haveCode": "Ya tengo un código de familia",
+    "codeLabel": "Código de familia", "join": "Unirme", "codeInvalid": "El código no es válido.", "notFound": "No se encontró esa familia.", "syncError": "No se pudo conectar. Inténtalo más tarde."
+  },
+  "install": {
+    "link": "Instalar en el móvil", "title": "Instalar la app", "button": "Instalar ahora",
+    "ios": ["Abre esta página en Safari.", "Pulsa el botón Compartir.", "Elige \"Añadir a pantalla de inicio\".", "Pulsa \"Añadir\"."],
+    "android": ["Abre esta página en Chrome.", "Pulsa el menú de los tres puntos.", "Elige \"Instalar aplicación\" o \"Añadir a pantalla de inicio\".", "Confirma."],
+    "offline": "Una vez instalada, funciona también sin conexión."
+  },
+  "parent": {
+    "setup": {
+      "title": "Configuración para padres", "intro": "Crea un PIN para proteger el panel de padres y las opciones de borrado.",
+      "pin": "PIN (4 dígitos)", "pin2": "Repite el PIN", "pinHint": "Guárdalo bien: no se puede recuperar.",
+      "consent": "Soy el padre, madre o tutor y acepto el tratamiento de datos descrito en la", "privacyLink": "política de privacidad (borrador)",
+      "pinError": "El PIN debe tener 4 dígitos y coincidir.", "consentError": "Debes aceptar para continuar.", "continue": "Continuar"
+    },
+    "title": "Panel de padres", "children": "Niños", "noChildren": "Aún no hay perfiles.",
+    "chartLabel": "Minutos activos de los últimos 14 días",
+    "childStats": "Sesiones: {sessions} · Racha: {streak} (mejor {best}) · Monedas: {coins}", "tables": "Tablas dominadas (acierto)",
+    "mode": "Modo",
+    "modes": { "grade": "Mi grado", "challenge": "Reto", "confidence": "Confianza", "onedigit": "Una cifra" },
+    "modeHelp": {
+      "grade": "Operaciones del grado elegido.", "challenge": "Operaciones más difíciles. El niño no ve que es un reto.",
+      "confidence": "Un nivel más fácil para ganar seguridad.", "onedigit": "Solo números de una cifra, ideal para empezar."
+    },
+    "adaptive": "Dificultad adaptativa (sube o baja poco a poco)", "bilingual": "Lectura en el otro idioma (bilingüe)",
+    "weekGoal": "Meta semanal", "daysOption": "{n} días", "editProfile": "Editar", "print": "Hoja imprimible",
+    "deleteProfile": "Eliminar perfil", "deleteProfileConfirm": "¿Eliminar el perfil de {nick} y todo su progreso?",
+    "rewards": "Premios reales de la familia", "rewardsHint": "Define premios que entregas tú cuando se alcanza una racha (por ejemplo, 30 días).",
+    "rewardText": "Premio", "rewardDays": "Días de racha", "daysUnit": "días", "unlockedBy": "Alcanzado por", "notYet": "Todavía no", "delivered": "Entregado",
+    "sync": "Sincronizar dispositivos", "syncNotConfigured": "La sincronización no está activada en esta instalación. Los datos se guardan solo en este dispositivo.",
+    "syncHint": "Crea un código de familia para compartir el progreso entre dispositivos. Los datos se cifran antes de salir de este dispositivo.",
+    "syncEnable": "Crear código de familia", "syncCode": "Código de familia", "syncWarn": "Guarda este código: sin él no se pueden recuperar ni descifrar los datos.",
+    "syncLast": "Última sincronización", "syncNow": "Sincronizar ahora", "syncOff": "Desconectar", "syncDelete": "Desconectar y borrar de la nube",
+    "syncDeleteConfirm": "¿Borrar los datos de la nube y desconectar este dispositivo?",
+    "data": "Datos", "dataHint": "Exporta una copia (JSON) o impórtala en otro dispositivo.", "export": "Exportar", "import": "Importar",
+    "importConfirm": "Esto reemplaza los datos actuales. ¿Continuar?", "importOk": "Datos importados.", "importError": "El archivo no es válido.",
+    "deleteAll": "Borrar todos los datos", "deleteAllConfirm": "Se borrarán todos los perfiles y el progreso de este dispositivo (y de la nube si está activada).",
+    "deleteWord": "BORRAR", "deleteRemoteFailed": "No se pudo borrar la copia en la nube. No se ha borrado nada.",
+    "changePin": "Cambiar PIN", "newPin": "Nuevo PIN", "pinChanged": "PIN cambiado.", "more": "Más", "lock": "Bloquear panel"
+  },
+  "selector": { "title": "¿Quién va a practicar?", "add": "Añadir niño", "familyGoal": "Meta familiar de la semana", "familyGoalText": "{done} de {target} días entre todos", "parents": "Padres" },
+  "profile": {
+    "avatar": "Avatar", "ageOption": "{n} años", "nickRequired": "Escribe un apodo.", "edit": "Editar perfil", "new": "Nuevo perfil",
+    "nick": "Apodo", "nickHint": "Usa un apodo, no el nombre completo.", "language": "Idioma", "grade": "Grado", "orAge": "O elige por edad"
+  },
+  "grades": { "1": "1.º grado", "2": "2.º grado", "3": "3.º grado", "4": "4.º grado", "5": "5.º grado", "6": "6.º grado", "7": "7.º grado", "8": "8.º grado", "9": "9.º grado" },
+  "home": {
+    "practice": "¡A practicar!", "practiceGrade": "Practicar ({grade})", "continue": "Continuar", "doneToday": "¡Hoy ya terminaste!",
+    "openChest": "Abrir el cofre", "moreOptional": "Practicar más (opcional)", "reading": "Lectura", "world": "Mi mundo",
+    "hello": "¡Hola, {nick}!", "streak": "Racha {n}", "week": "Semana {done}/{goal}", "sound": "Sonido", "reduceMotion": "Menos animaciones"
+  },
+  "mascot": {
+    "stage": { "0": "Un huevo esperando", "1": "Un pollito recién nacido", "2": "Un pollito curioso", "3": "Una gallina fuerte", "4": "¡Un águila imparable!" },
+    "hint": "Tu mascota crece con tu racha."
+  },
+  "practice": {
+    "timeBar": "Tiempo activo", "yourAnswer": "Tu respuesta", "next": "Siguiente", "paused": "En pausa", "pausedHint": "El reloj se detuvo. Toca para seguir.",
+    "resume": "Seguir", "block": "¡Bloque completado!", "praise": ["¡Muy bien!", "¡Correcto!", "¡Genial!", "¡Excelente!", "¡Así se hace!"],
+    "wrong": "Casi. La respuesta era {answer}. ¡Lo veremos otra vez!", "minus": "Signo menos", "delete": "Borrar", "saveExit": "Guardar y salir", "check": "Comprobar"
+  },
+  "end": {
+    "title": "¡Sesión completada!", "titleExtra": "¡Buen trabajo extra!", "coins": "Ganaste {n} monedas",
+    "reason": { "base": "Sesión completa", "streak": "Bono de racha", "week": "Meta semanal", "family": "Meta familiar" },
+    "streak": "Racha: {n} días", "grace": "Se usaron {n} día(s) de gracia para mantener tu racha.", "newBadge": "Nueva insignia",
+    "summary": "Hiciste {n} operaciones y acertaste {ok}.", "review": "Repasaste {n} para aprender de ellas.", "positive": "Cada día que practicas, tu cerebro se hace más fuerte.",
+    "chest": "Abrir el cofre del día", "chestCoins": "¡El cofre tenía {n} monedas!", "chestItem": "¡El cofre tenía un objeto nuevo: {name}!", "back": "Volver al inicio"
+  },
+  "world": {
+    "title": "Mi mundo", "tab": { "badges": "Insignias", "shop": "Tienda", "avatar": "Avatar" },
+    "earned": "Conseguida", "locked": "Aún por conseguir", "type": { "color": "Colores", "accessory": "Accesorios", "background": "Fondos" },
+    "equip": "Poner", "unequip": "Quitar", "buy": "Comprar", "needCoins": "Faltan {n} monedas"
+  },
+  "badges": {
+    "first": { "name": "Primer paso", "desc": "Completa tu primera sesión." },
+    "sessions10": { "name": "Constante", "desc": "Completa 10 sesiones." },
+    "sessions50": { "name": "Campeón", "desc": "Completa 50 sesiones." },
+    "sessions100": { "name": "Leyenda", "desc": "Completa 100 sesiones." },
+    "streak3": { "name": "Racha de 3", "desc": "Practica 3 días seguidos." },
+    "streak7": { "name": "Racha de 7", "desc": "Practica 7 días seguidos." },
+    "streak30": { "name": "Racha de 30", "desc": "Practica 30 días seguidos." },
+    "streak100": { "name": "Racha de 100", "desc": "Practica 100 días seguidos." },
+    "perfect": { "name": "Sesión perfecta", "desc": "Una sesión sin fallos." },
+    "tables1": { "name": "Primera tabla", "desc": "Domina una tabla de multiplicar." },
+    "tables5": { "name": "Cinco tablas", "desc": "Domina cinco tablas de multiplicar." },
+    "week": { "name": "Semana completa", "desc": "Cumple tu meta semanal." },
+    "reader": { "name": "Lector", "desc": "Completa una lectura." },
+    "age14": { "name": "PolloFenix", "desc": "Una insignia muy especial." }
+  },
+  "shop": {
+    "red": "Rojo", "blue": "Azul", "green": "Verde", "purple": "Morado", "orange": "Naranja",
+    "sky": "Cielo", "forest": "Bosque", "sunset": "Atardecer", "space": "Espacio",
+    "ribbon": "Lazo", "shades": "Gafas", "cap": "Gorra", "tophat": "Sombrero", "headphones": "Auriculares", "star": "Estrella", "butterfly": "Mariposa", "crown": "Corona"
+  },
+  "reading": { "good": "¡Correcto!", "wrong": "La respuesta era: {answer}", "done": "¡Lectura terminada!", "score": "Acertaste {ok} de {n}.", "coins": "Ganaste {n} monedas por leer hoy." },
+  "print": { "print": "Imprimir", "hint": "Página 1: operaciones. Página 2: respuestas.", "title": "Operaciones", "answers": "Respuestas" },
+  "privacy": {
+    "link": "Privacidad y términos", "title": "Política de privacidad (borrador)",
+    "draftNotice": "Este texto es un borrador informativo. Debe ser revisado por un abogado antes de usar la aplicación con el público.",
+    "sections": [
+      { "h": "Qué datos se guardan", "p": "Apodos, avatares, grado, progreso, monedas e insignias. No se piden nombres reales, correos ni ubicación." },
+      { "h": "Dónde se guardan", "p": "Por defecto, solo en este dispositivo. Si la familia activa la sincronización, se envía a un servidor una copia cifrada en el dispositivo; el servidor no puede leerla." },
+      { "h": "Anuncios y rastreo", "p": "La aplicación no usa anuncios, analíticas ni cookies de seguimiento." },
+      { "h": "Control de los padres", "p": "Los padres pueden exportar, importar y borrar todos los datos desde el panel protegido por PIN, incluida la copia en la nube." },
+      { "h": "Menores", "p": "La aplicación está pensada para niños bajo la supervisión de un padre, madre o tutor, que da su consentimiento al configurarla." }
+    ]
+  },
+  "terms": {
+    "title": "Términos de uso (borrador)",
+    "sections": [
+      { "h": "Uso", "p": "La aplicación es una herramienta educativa de práctica. No sustituye la enseñanza escolar." },
+      { "h": "Sin garantías", "p": "Se ofrece tal cual. Si pierdes el código de familia o el PIN, los datos no se pueden recuperar." },
+      { "h": "Cambios", "p": "Estos términos pueden cambiar. Este es un borrador pendiente de revisión legal." }
+    ]
+  }
+}

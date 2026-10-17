@@ -1,0 +1,16 @@
+[
+  { "id": "first", "type": "sessions", "value": 1, "emoji": "🌟" },
+  { "id": "sessions10", "type": "sessions", "value": 10, "emoji": "🎯" },
+  { "id": "sessions50", "type": "sessions", "value": 50, "emoji": "🏆" },
+  { "id": "sessions100", "type": "sessions", "value": 100, "emoji": "👑" },
+  { "id": "streak3", "type": "streak", "value": 3, "emoji": "🔥" },
+  { "id": "streak7", "type": "streak", "value": 7, "emoji": "⚡" },
+  { "id": "streak30", "type": "streak", "value": 30, "emoji": "🚀" },
+  { "id": "streak100", "type": "streak", "value": 100, "emoji": "🌈" },
+  { "id": "perfect", "type": "perfect", "value": 1, "emoji": "💯" },
+  { "id": "tables1", "type": "tables", "value": 1, "emoji": "✖️" },
+  { "id": "tables5", "type": "tables", "value": 5, "emoji": "🧠" },
+  { "id": "week", "type": "week", "value": 1, "emoji": "📅" },
+  { "id": "reader", "type": "reading", "value": 1, "emoji": "📚" },
+  { "id": "age14", "type": "special", "value": 0, "emoji": "🎂", "hidden": true }
+]

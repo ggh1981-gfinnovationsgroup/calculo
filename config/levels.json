@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "notes": "Tabla editable. Cada nivel es una lista de tipos de operación con peso. add/sub: resultados >= 0. mul: factores por rango. div: divisor y cociente por rango (siempre exacta). nadd/nsub/nmul/ndiv: con negativos (máx. = magnitud máxima de cada operando).",
+  "ageToLevel": { "6": 1, "7": 2, "8": 3, "9": 4, "10": 5, "11": 6, "12": 7, "13": 8, "14": 9 },
+  "modes": { "challengeMultiplier": 2, "confidenceOffset": -1, "labelOffset": 1 },
+  "oneDigit": [
+    { "kind": "add", "weight": 1, "min": 1, "max": 9, "resultMax": 18 },
+    { "kind": "sub", "weight": 1, "min": 1, "max": 9 },
+    { "kind": "mul", "weight": 1, "aMin": 1, "aMax": 9, "bMin": 1, "bMax": 9 },
+    { "kind": "div", "weight": 1, "dMin": 2, "dMax": 9, "qMin": 1, "qMax": 9 }
+  ],
+  "levels": {
+    "1": [
+      { "kind": "add", "weight": 1, "min": 0, "max": 10, "resultMax": 10 },
+      { "kind": "sub", "weight": 1, "min": 0, "max": 10 }
+    ],
+    "2": [
+      { "kind": "add", "weight": 1, "min": 0, "max": 20, "resultMax": 20 },
+      { "kind": "sub", "weight": 1, "min": 0, "max": 20 }
+    ],
+    "3": [
+      { "kind": "add", "weight": 2, "min": 0, "max": 50, "resultMax": 50 },
+      { "kind": "sub", "weight": 2, "min": 0, "max": 50 },
+      { "kind": "mul", "weight": 1, "aMin": 2, "aMax": 5, "bMin": 1, "bMax": 5 },
+      { "kind": "div", "weight": 1, "dMin": 2, "dMax": 5, "qMin": 1, "qMax": 5 }
+    ],
+    "4": [
+      { "kind": "add", "weight": 2, "min": 0, "max": 100, "resultMax": 100 },
+      { "kind": "sub", "weight": 2, "min": 0, "max": 100 },
+      { "kind": "mul", "weight": 2, "aMin": 1, "aMax": 10, "bMin": 1, "bMax": 10 },
+      { "kind": "div", "weight": 2, "dMin": 2, "dMax": 10, "qMin": 1, "qMax": 10 }
+    ],
+    "5": [
+      { "kind": "add", "weight": 2, "min": 10, "max": 999, "resultMax": 1000 },
+      { "kind": "sub", "weight": 2, "min": 10, "max": 1000 },
+      { "kind": "mul", "weight": 2, "aMin": 2, "aMax": 12, "bMin": 2, "bMax": 12 },
+      { "kind": "div", "weight": 2, "dMin": 2, "dMax": 12, "qMin": 2, "qMax": 12 }
+    ],
+    "6": [
+      { "kind": "add", "weight": 2, "min": 100, "max": 9999, "resultMax": 19999 },
+      { "kind": "sub", "weight": 2, "min": 100, "max": 9999 },
+      { "kind": "mul", "weight": 2, "aMin": 2, "aMax": 12, "bMin": 2, "bMax": 12 },
+      { "kind": "mul", "weight": 1, "aMin": 11, "aMax": 99, "bMin": 2, "bMax": 9 },
+      { "kind": "mul", "weight": 1, "aMin": 11, "aMax": 20, "bMin": 11, "bMax": 20 },
+      { "kind": "div", "weight": 2, "dMin": 2, "dMax": 12, "qMin": 2, "qMax": 12 },
+      { "kind": "nadd", "weight": 1, "max": 20 },
+      { "kind": "nsub", "weight": 1, "max": 20 },
+      { "kind": "nmul", "weight": 1, "max": 9 }
+    ],
+    "7": [
+      { "kind": "add", "weight": 2, "min": 1000, "max": 99999, "resultMax": 199999 },
+      { "kind": "sub", "weight": 2, "min": 1000, "max": 99999 },
+      { "kind": "mul", "weight": 1, "aMin": 11, "aMax": 99, "bMin": 2, "bMax": 9 },
+      { "kind": "mul", "weight": 1, "aMin": 11, "aMax": 40, "bMin": 11, "bMax": 40 },
+      { "kind": "div", "weight": 2, "dMin": 2, "dMax": 12, "qMin": 5, "qMax": 50 },
+      { "kind": "nadd", "weight": 1, "max": 100 },
+      { "kind": "nsub", "weight": 1, "max": 100 },
+      { "kind": "nmul", "weight": 1, "max": 12 },
+      { "kind": "ndiv", "weight": 1, "dMin": 2, "dMax": 12, "qMin": 1, "qMax": 12 }
+    ],
+    "8": [
+      { "kind": "add", "weight": 2, "min": 10000, "max": 999999, "resultMax": 1999999 },
+      { "kind": "sub", "weight": 2, "min": 10000, "max": 999999 },
+      { "kind": "mul", "weight": 1, "aMin": 101, "aMax": 999, "bMin": 2, "bMax": 9 },
+      { "kind": "mul", "weight": 1, "aMin": 11, "aMax": 99, "bMin": 11, "bMax": 99 },
+      { "kind": "div", "weight": 2, "dMin": 2, "dMax": 20, "qMin": 5, "qMax": 50 },
+      { "kind": "nadd", "weight": 1, "max": 500 },
+      { "kind": "nsub", "weight": 1, "max": 500 },
+      { "kind": "nmul", "weight": 1, "max": 15 },
+      { "kind": "ndiv", "weight": 1, "dMin": 2, "dMax": 15, "qMin": 2, "qMax": 20 }
+    ],
+    "9": [
+      { "kind": "add", "weight": 2, "min": 100000, "max": 9999999, "resultMax": 19999999 },
+      { "kind": "sub", "weight": 2, "min": 100000, "max": 9999999 },
+      { "kind": "mul", "weight": 1, "aMin": 11, "aMax": 99, "bMin": 11, "bMax": 99 },
+      { "kind": "mul", "weight": 1, "aMin": 101, "aMax": 999, "bMin": 11, "bMax": 99 },
+      { "kind": "div", "weight": 2, "dMin": 2, "dMax": 99, "qMin": 5, "qMax": 99 },
+      { "kind": "nadd", "weight": 1, "max": 1000 },
+      { "kind": "nsub", "weight": 1, "max": 1000 },
+      { "kind": "nmul", "weight": 1, "max": 25 },
+      { "kind": "ndiv", "weight": 1, "dMin": 2, "dMax": 25, "qMin": 2, "qMax": 30 }
+    ]
+  }
+}

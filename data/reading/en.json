@@ -1,0 +1,65 @@
+{
+  "passages": [
+    {
+      "id": "duck",
+      "levels": [1, 3],
+      "title": "The little duck",
+      "text": "Dot is a small yellow duck. She loves the pond. Every morning she swims in circles and quacks hello to the frogs.",
+      "questions": [
+        { "q": "What color is Dot?", "options": ["Yellow", "White", "Green"], "answer": 0 },
+        { "q": "What does she do every morning?", "options": ["Sleeps in the sun", "Swims and says hello to the frogs", "Flies away"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "rain",
+      "levels": [1, 4],
+      "title": "A rainy day",
+      "text": "It rained all afternoon. Sam put on his red boots and jumped in the puddles. Later, his dad was waiting with a towel and hot soup.",
+      "questions": [
+        { "q": "What color are Sam's boots?", "options": ["Red", "Blue", "Black"], "answer": 0 },
+        { "q": "Who was waiting with a towel?", "options": ["His mom", "His dad", "His teacher"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "bees",
+      "levels": [3, 5],
+      "title": "Bees",
+      "text": "Bees live in hives and work as a team. They visit flowers to collect nectar, which they turn into honey. While flying from flower to flower they carry pollen, which helps new plants grow.",
+      "questions": [
+        { "q": "What do bees turn into honey?", "options": ["Water", "Nectar", "Leaves"], "answer": 1 },
+        { "q": "How do bees help plants?", "options": ["By carrying pollen", "By watering them", "By cutting them"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "train",
+      "levels": [4, 6],
+      "title": "The 7:10 train",
+      "text": "Maya got to the station at a quarter to seven. Her train left at ten past seven. She sat on a bench and read her book while she waited.",
+      "questions": [
+        { "q": "What time did Maya get to the station?", "options": ["6:45", "7:15", "7:45"], "answer": 0 },
+        { "q": "How many minutes did she wait for the train?", "options": ["15", "25", "35"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "roman",
+      "levels": [6, 8],
+      "title": "Roman numerals",
+      "text": "The Romans wrote numbers with letters: I is 1, V is 5, X is 10, L is 50 and C is 100. To write 14 they used XIV, which means 10 plus 5 minus 1. We still see these numbers on some clocks and in the names of certain kings.",
+      "questions": [
+        { "q": "What is the value of the letter X?", "options": ["5", "10", "50"], "answer": 1 },
+        { "q": "Which number is written XIV?", "options": ["16", "14", "6"], "answer": 1 },
+        { "q": "Where do we still see these numbers?", "options": ["On clocks and in kings' names", "Only in history books", "Nowhere"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "little-every-day",
+      "levels": [7, 9],
+      "title": "A little every day",
+      "text": "A coach used to say that practicing a little every day is worth more than practicing a lot on a single day. The brain, like a muscle, grows stronger with repetition. That is why fifteen minutes of mental math every day for a year adds up to more than ninety hours of training.",
+      "questions": [
+        { "q": "According to the text, what is worth more?", "options": ["Practicing a lot on one day", "Practicing a little every day", "Not practicing"], "answer": 1 },
+        { "q": "Fifteen minutes a day for a year adds up to...", "options": ["More than 9 hours", "More than 90 hours", "More than 900 hours"], "answer": 1 }
+      ]
+    }
+  ]
+}

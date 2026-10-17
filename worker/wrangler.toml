@@ -1,0 +1,11 @@
+name = "calculo-sync"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://calculo.gfinnovationsgroup.com"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "calculo"
+database_id = "REEMPLAZA-CON-EL-ID-DE-d1-create"

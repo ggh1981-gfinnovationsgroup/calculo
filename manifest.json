@@ -1,0 +1,16 @@
+{
+  "name": "Cálculo diario",
+  "short_name": "Cálculo",
+  "description": "Cálculo mental diario / Daily mental math",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f5ff",
+  "theme_color": "#5b5bd6",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

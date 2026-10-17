@@ -1,0 +1,3 @@
+node_modules/
+# Mensaje en texto plano del regalo: solo se publica la versión cifrada.
+tools/gift-message.json
