@@ -6,6 +6,7 @@ import { ActiveTimer } from '../timer.js';
 import { newSession, currentOp, submitAnswer, partialDelta } from '../session.js';
 import { dateKey, isDoneToday, recordProgress, finalizeSession, recordTable } from '../rewards.js';
 import { play } from '../sounds.js';
+import { modal } from '../ui.js';
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -25,6 +26,9 @@ export function practice(id) {
   }
   const timer = new ActiveTimer({ activeMs: S.activeMs, idleMs: S.idleMs, maxTickMs: S.maxTickMs, elapsedMs: session.elapsedMs });
 
+  session.skipped ||= [];
+  let review = false;
+  let prompting = false;
   let buf = '';
   let locked = false;
   let finished = false;
@@ -55,6 +59,7 @@ export function practice(id) {
   const resume = () => touch();
 
   const showOp = () => {
+    if (review && session.queue.length === 0) return finalize();
     const op = currentOp(session, profile, cfg);
     opEl.textContent = `${op.text} = ?`;
     buf = '';
@@ -101,7 +106,7 @@ export function practice(id) {
       play(r.blockDone ? 'block' : 'ok', profile.sound);
       fb.className = 'feedback good';
       fb.textContent = r.blockDone ? `🎉 ${t('practice.block')}` : `✓ ${pick(raw('practice.praise'))}`;
-      setTimeout(() => !finished && showOp(), r.blockDone ? 1100 : 550);
+      setTimeout(() => !finished && showOp(), r.blockDone && !review ? 1100 : 550);
     } else {
       play('soft', profile.sound);
       fb.className = 'feedback gentle';
@@ -119,7 +124,34 @@ export function practice(id) {
     else if (e.key === 'Enter') submit();
   };
 
+  const skip = () => {
+    if (locked || review || timer.done) return;
+    touch();
+    session.skipped.push(session.queue.shift());
+    saveSession();
+    showOp();
+  };
+
   const finish = () => {
+    if (finished || prompting || review) return;
+    if (session.skipped.length === 0) return finalize();
+    prompting = true;
+    const n = session.skipped.length;
+    const m = modal(
+      h('h2', {}, t('practice.skippedTitle')),
+      h('p', {}, t('practice.skippedText', { n })),
+      h('button', { class: 'btn big', type: 'button', onclick: () => {
+        m.close();
+        review = true;
+        prompting = false;
+        session.queue = session.skipped;
+        session.skipped = [];
+        showOp();
+      } }, t('practice.solveSkipped')),
+      h('button', { class: 'btn big secondary', type: 'button', onclick: () => { m.close(); finalize(); } }, t('practice.finishNow')));
+  };
+
+  const finalize = () => {
     if (finished) return;
     finished = true;
     const res = finalizeSession(store.state, profile, session, dk, cfg.app, cfg.badges);
@@ -147,7 +179,7 @@ export function practice(id) {
     const left = Math.ceil(timer.remainingMs / 1000);
     timeText.textContent = `${Math.floor(left / 60)}:${String(left % 60).padStart(2, '0')}`;
     if (timer.done) finish();
-    else if (!timer.running) {
+    else if (!timer.running && !review) {
       pauseOv.hidden = false;
       saveSession();
     }
@@ -179,7 +211,8 @@ export function practice(id) {
       h('span', { class: 'spacer' }), coins),
     h('div', { class: 'timebar' }, barWrap, timeText),
     h('main', { class: 'content stack center' }, opEl, ansEl, fb, next, pad,
-      h('button', { class: 'btn big primary', type: 'button', onclick: submit }, t('practice.check'))),
+      h('button', { class: 'btn big primary', type: 'button', onclick: submit }, t('practice.check')),
+      h('button', { class: 'btn secondary', type: 'button', onclick: skip }, `⏭ ${t('practice.skip')}`)),
     pauseOv);
 
   el._destroy = () => {

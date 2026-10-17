@@ -63,7 +63,8 @@
   "practice": {
     "timeBar": "Active time", "yourAnswer": "Your answer", "next": "Next", "paused": "Paused", "pausedHint": "The clock stopped. Tap to continue.",
     "resume": "Continue", "block": "Block complete!", "praise": ["Great job!", "Correct!", "Awesome!", "Excellent!", "Well done!"],
-    "wrong": "Almost. The answer was {answer}. We'll see it again!", "minus": "Minus sign", "delete": "Delete", "saveExit": "Save and exit", "check": "Check"
+    "wrong": "Almost. The answer was {answer}. We'll see it again!", "minus": "Minus sign", "delete": "Delete", "saveExit": "Save and exit", "check": "Check",
+    "skip": "Skip", "skippedTitle": "Time's up!", "skippedText": "You skipped {n} operation(s). Do you want to solve them now?", "solveSkipped": "Solve skipped ones", "finishNow": "Finish"
   },
   "end": {
     "title": "Session complete!", "titleExtra": "Great extra work!", "coins": "You earned {n} coins",
