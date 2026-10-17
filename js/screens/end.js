@@ -55,5 +55,5 @@ export function endScreen(id) {
 
   draw();
   if (res && !res.extra) confetti();
-  return frame(box, { profile: p, hideLang: true });
+  return frame(box, { profile: p });
 }

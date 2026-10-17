@@ -17,14 +17,15 @@ export function frame(content, { profile = null, back = null, hideLang = false }
   const logo = h('button', { class: 'logo', type: 'button', 'aria-label': t('app.name') }, '🧮');
   initGift(logo, GIFT, { onUnlock: () => unlockAge14(profile) });
 
+  const base = () => (profile ? profile.lang : getLang());
   const toggle = () => {
-    const next = otherLang(getLang());
+    const next = otherLang(base());
     if (profile) profile.lang = next;
     else store.state.lang = next;
     store.commit();
     ctx.rerender();
   };
-  const other = languages().find((l) => l.code !== getLang());
+  const other = languages().find((l) => l.code !== base());
   const header = h(
     'header',
     { class: 'topbar' },

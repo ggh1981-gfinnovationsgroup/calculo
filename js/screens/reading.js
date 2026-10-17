@@ -66,5 +66,5 @@ export function reading(id) {
     draw();
   });
 
-  return frame(box, { profile: p, back: `#/home/${id}`, hideLang: true });
+  return frame(box, { profile: p, back: `#/home/${id}` });
 }
