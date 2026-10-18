@@ -63,7 +63,7 @@
   "practice": {
     "timeBar": "Tiempo activo", "yourAnswer": "Tu respuesta", "next": "Siguiente", "paused": "En pausa", "pausedHint": "El reloj se detuvo. Toca para seguir.",
     "resume": "Seguir", "block": "¡Bloque completado!", "praise": ["¡Muy bien!", "¡Correcto!", "¡Genial!", "¡Excelente!", "¡Así se hace!"],
-    "wrong": "Casi. La respuesta era {answer}. ¡Lo veremos otra vez!", "minus": "Signo menos", "delete": "Borrar", "saveExit": "Guardar y salir", "check": "Comprobar",
+    "wrong": "Casi. La respuesta era {answer}. ¡Sigue, lo vas a lograr!", "minus": "Signo menos", "delete": "Borrar", "saveExit": "Guardar y salir", "check": "Comprobar",
     "skip": "Saltar", "skippedTitle": "¡Se acabó el tiempo!", "skippedText": "Saltaste {n} operación(es). ¿Quieres resolverlas ahora?", "solveSkipped": "Resolver las saltadas", "finishNow": "Terminar"
   },
   "end": {

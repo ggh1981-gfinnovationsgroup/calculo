@@ -1,4 +1,4 @@
-const CACHE = 'calculo-v3';
+const CACHE = 'calculo-v5';
 const ASSETS = [
   './', 'index.html', 'manifest.json', 'css/style.css',
   'config/app.json', 'config/levels.json', 'config/badges.json', 'data/shop.json',

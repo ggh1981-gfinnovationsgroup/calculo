@@ -108,13 +108,13 @@ test('reloj: completa a los 15 minutos activos', () => {
   assert.equal(t.elapsedMs, 900000);
 });
 
-test('sesión: bloques de 10, errores reaparecen y no restan nada', () => {
+test('sesión: bloques de 10, errores no se reintentan y no restan nada', () => {
   const p = mk({ adaptive: true });
   const s = newSession('2026-10-17');
   const first = currentOp(s, p, cfg);
   const r = submitAnswer(s, p, cfg, first.answer + 1);
   assert.equal(r.correct, false);
-  assert.ok(s.queue.some((o) => o.retry && o.key === first.key));
+  assert.ok(!s.queue.some((o) => o.retry));
   assert.equal(p.coins, 0);
   let blocks = 0;
   for (let i = 0; i < 40; i++) {
@@ -260,4 +260,16 @@ test('lectura: cada idioma cubre los niveles 1-9', async () => {
     }
     for (const p of passages) for (const q of p.questions) assert.ok(q.answer >= 0 && q.answer < q.options.length);
   }
+});
+
+test('un error no vuelve a aparecer', () => {
+  const p = mk();
+  const s = newSession('2026-10-17');
+  const first = currentOp(s, p, cfg);
+  submitAnswer(s, p, cfg, first.answer + 1);
+  for (let i = 0; i < 30; i++) {
+    const op = currentOp(s, p, cfg);
+    submitAnswer(s, p, cfg, op.key === first.key ? op.answer + 1 : op.answer);
+  }
+  assert.equal(s.wrong, 1);
 });

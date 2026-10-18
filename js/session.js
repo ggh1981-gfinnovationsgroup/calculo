@@ -85,8 +85,6 @@ export function submitAnswer(session, profile, cfg, value) {
       session.blockCorrect += 1;
     }
   }
-  // Errores sin castigo: la operación vuelve a aparecer unas posiciones después.
-  if (!correct) session.queue.splice(Math.min(4, session.queue.length), 0, { ...op, retry: true });
   let blockDone = false;
   if (session.freshInBlock >= cfg.app.session.blockSize) {
     blockDone = true;
