@@ -9,6 +9,7 @@ import { selector, profileForm } from './screens/profiles.js';
 import { home } from './screens/home.js';
 import { practice } from './screens/practice.js';
 import { endScreen } from './screens/end.js';
+import { redo } from './screens/redo.js';
 import { world } from './screens/world.js';
 import { reading } from './screens/reading.js';
 import { parentPanel } from './screens/parent.js';
@@ -42,6 +43,7 @@ function route() {
       case 'home': el = home(id); break;
       case 'play': el = practice(id); break;
       case 'end': el = endScreen(id); break;
+      case 'redo': el = redo(id); break;
       case 'world': el = world(id); break;
       case 'read': el = reading(id); break;
       case 'parent': el = parentPanel(); break;

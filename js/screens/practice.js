@@ -60,6 +60,7 @@ export function practice(id) {
 
   const showOp = () => {
     if (review && session.queue.length === 0) return finalize();
+    if (!review && session.answered >= S.maxOps) return finish();
     const op = currentOp(session, profile, cfg);
     opEl.textContent = `${op.text} = ?`;
     buf = '';
@@ -155,7 +156,7 @@ export function practice(id) {
     if (finished) return;
     finished = true;
     const res = finalizeSession(store.state, profile, session, dk, cfg.app, cfg.badges);
-    ctx.lastResult[id] = res;
+    ctx.lastResult[id] = { ...res, log: session.log || [] };
     store.commit();
     go(`#/end/${id}`);
   };

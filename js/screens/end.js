@@ -31,6 +31,14 @@ export function endScreen(id) {
     for (const b of res?.newBadges || []) lines.push(h('div', { class: 'badge-new' }, `${ctx.cfg.badges.find((x) => x.id === b)?.emoji} ${t('end.newBadge')}: ${t(`badges.${b}.name`)}`));
     lines.push(h('p', {}, t('end.summary', { n: totals.answered, ok: totals.correct })));
     if (totals.wrong > 0) lines.push(h('p', { class: 'hint' }, t('end.review', { n: totals.wrong })));
+    const log = res?.log || [];
+    if (log.length) {
+      const sorted = [...log.filter((x) => !x.ok), ...log.filter((x) => x.ok)];
+      lines.push(h('div', { class: 'panel' }, h('strong', {}, t('end.detail')),
+        h('ul', { class: 'plain' }, sorted.map((x) => h('li', { class: x.ok ? 'good' : 'gentle' },
+          x.ok ? `✓ ${x.text} = ${x.answer}` : `✗ ${x.text} = ${x.answer} (${t('end.yours')}: ${x.given})`)))));
+      if (log.some((x) => !x.ok)) lines.push(h('button', { class: 'btn', type: 'button', onclick: () => go(`#/redo/${id}`) }, `🔁 ${t('end.redo')}`));
+    }
     lines.push(h('p', { class: 'positive' }, t('end.positive')));
     if (canOpenChest(p, dk)) {
       lines.push(h('button', { class: 'btn big', type: 'button', onclick: open }, `🎁 ${t('end.chest')}`));

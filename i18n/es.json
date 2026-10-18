@@ -70,7 +70,7 @@
     "title": "¡Sesión completada!", "titleExtra": "¡Buen trabajo extra!", "coins": "Ganaste {n} monedas",
     "reason": { "base": "Sesión completa", "streak": "Bono de racha", "week": "Meta semanal", "family": "Meta familiar" },
     "streak": "Racha: {n} días", "grace": "Se usaron {n} día(s) de gracia para mantener tu racha.", "newBadge": "Nueva insignia",
-    "summary": "Hiciste {n} operaciones y acertaste {ok}.", "review": "Repasaste {n} para aprender de ellas.", "positive": "Cada día que practicas, tu cerebro se hace más fuerte.",
+    "summary": "Hiciste {n} operaciones y acertaste {ok}.", "review": "Repasaste {n} para aprender de ellas.", "detail": "Tus respuestas", "yours": "tú", "redo": "Practicar las falladas", "redoTitle": "Practicar las falladas", "redoDone": "¡Listo! Aquí no se cambian monedas ni racha.", "positive": "Cada día que practicas, tu cerebro se hace más fuerte.",
     "chest": "Abrir el cofre del día", "chestCoins": "¡El cofre tenía {n} monedas!", "chestItem": "¡El cofre tenía un objeto nuevo: {name}!", "back": "Volver al inicio"
   },
   "world": {

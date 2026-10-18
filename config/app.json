@@ -1,7 +1,7 @@
 {
   "version": 1,
   "syncUrl": "",
-  "session": { "activeMs": 900000, "idleMs": 10000, "blockSize": 10, "maxTickMs": 2000 },
+  "session": { "activeMs": 900000, "idleMs": 10000, "blockSize": 10, "maxOps": 50, "maxTickMs": 2000 },
   "rewards": {
     "fullCoins": 10,
     "partialCoinsMax": 5,

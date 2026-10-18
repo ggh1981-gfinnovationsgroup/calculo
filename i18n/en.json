@@ -70,7 +70,7 @@
     "title": "Session complete!", "titleExtra": "Great extra work!", "coins": "You earned {n} coins",
     "reason": { "base": "Full session", "streak": "Streak bonus", "week": "Weekly goal", "family": "Family goal" },
     "streak": "Streak: {n} days", "grace": "{n} grace day(s) were used to keep your streak.", "newBadge": "New badge",
-    "summary": "You did {n} operations and got {ok} right.", "review": "You reviewed {n} to learn from them.", "positive": "Every day you practice, your brain gets stronger.",
+    "summary": "You did {n} operations and got {ok} right.", "review": "You reviewed {n} to learn from them.", "detail": "Your answers", "yours": "you", "redo": "Practice the missed ones", "redoTitle": "Practice the missed ones", "redoDone": "Done! No coins or streak change here.", "positive": "Every day you practice, your brain gets stronger.",
     "chest": "Open today's chest", "chestCoins": "The chest had {n} coins!", "chestItem": "The chest had a new item: {name}!", "back": "Back to start"
   },
   "world": {

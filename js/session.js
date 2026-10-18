@@ -77,6 +77,7 @@ export function submitAnswer(session, profile, cfg, value) {
   session.answered += 1;
   if (correct) session.correct += 1;
   else session.wrong += 1;
+  (session.log ||= []).push({ text: op.text, answer: op.answer, given: value, ok: correct });
   if (first) {
     session.fresh += 1;
     session.freshInBlock += 1;
